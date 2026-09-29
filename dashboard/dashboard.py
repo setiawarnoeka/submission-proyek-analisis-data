@@ -7,7 +7,9 @@ sns.set_style("whitegrid")
 
 st.set_page_config(page_title="E-Commerce Dashboard", layout="wide")
 
-all_df = pd.read_csv("main_data.csv")
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+all_df = pd.read_csv(os.path.join(BASE_DIR, "main_data.csv"))
 
 st.title("Dashboard Analisis E-Commerce")
 st.markdown("Analisis pesanan *delivered* periode 2017-2018")
